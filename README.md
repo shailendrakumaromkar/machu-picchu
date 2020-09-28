@@ -47,8 +47,8 @@ If Enabler selects Refund to Watcher, then here Refund to Watcher can be initiat
 5. Submit : Once above values are entered, user will click on Submit to initiate Refund to Watcher address, internally it will call smart contract function refundWatcher(address payable _watcherAddress, uint _result) public
 
 
-### Refund Details explorer: It will have call method to fetch all the details
-When user clicks on this tab, it will list down all the Refund done to a Watcher
+### Refund Details explorer: 
+It will have call method to fetch all the details.  When user clicks on this tab, it will list down all the Refund done to a Watcher
 Watcher Address & Refund amount
 
 ### Tech Stack

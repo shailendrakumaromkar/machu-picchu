@@ -1,7 +1,8 @@
 # machu-picchu
 machu-picchu
 
-UI/UX : Draft version, may be modified based on group review feedback/comments 
+#H1 UI/UX : 
+Draft version, may be modified based on group review feedback/comments 
 
 ![Compensation_UI](https://user-images.githubusercontent.com/19868756/94401553-682ea700-0188-11eb-8d7e-f6075c391d0d.png)
 

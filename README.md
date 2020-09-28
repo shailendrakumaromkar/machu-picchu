@@ -28,6 +28,7 @@ If Enabler selects Transfer to Member, then here Transfer to Member can be initi
 4. Total : It should be calculated automatically by adding Compensation Amount + Merit
 5. Submit : Once above values are entered, user will click on Submit to initiate Transfer to member address, internally it will call smart contract function     transferAmountToMember(address payable _recieverMember, uint _amount) public payable
 
+Compensation Amount calculation : TBD
 
 ### Tx Details explorer: 
 It will have call method to fetch all the details
@@ -46,6 +47,7 @@ If Enabler selects Refund to Watcher, then here Refund to Watcher can be initiat
 4. Total : It should be calculated automatically by adding Result + Reputation
 5. Submit : Once above values are entered, user will click on Submit to initiate Refund to Watcher address, internally it will call smart contract function refundWatcher(address payable _watcherAddress, uint _result) public
 
+Refund Amount calculation : TBD
 
 ### Refund Details explorer: 
 It will have call method to fetch all the details

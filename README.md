@@ -1,13 +1,12 @@
 # machu-picchu
 machu-picchu
 
+UI/UX : Draft version, may be modified based on group review feedback/comments 
 
 ![Compensation_UI](https://user-images.githubusercontent.com/19868756/94401553-682ea700-0188-11eb-8d7e-f6075c391d0d.png)
 
 
 
-
-UI/UX : Draft version, may be modified based on group review feedback/comments
 
 Compensation is one of the last module in whole Machu-Picchu project
 
@@ -49,6 +48,14 @@ Submit : Once above values are entered, user will click on Submit to initiate Re
 Refund Details explorer: It will have call method to fetch all the details
 When user clicks on this tab, it will list down all the Refund done to a Watcher
 Watcher Address & Refund amount
+
+Tech Stack
+
+Frontend :  HTML + CSS, Javascript
+Middleware : web3.js
+Backend : Solidity
+Blockchain network– Ganache, Metamask
+Framework – truffle
 
 
 

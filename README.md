@@ -2,7 +2,7 @@
 machu-picchu
 
 # UI/UX : 
-        Draft version, may be modified based on group review feedback/comments 
+Below is a Draft version, it may be modified based on group review feedback/comments 
 
 ![Compensation_UI](https://user-images.githubusercontent.com/19868756/94401553-682ea700-0188-11eb-8d7e-f6075c391d0d.png)
 
@@ -10,13 +10,12 @@ machu-picchu
 
 
 # Compensation: 
-It is one of the last module in whole Machu-Picchu project
-Compensation is the Heading/Title of the page
+It is one of the last module in whole Machu-Picchu project.  Compensation is the Heading/Title of the DApp
 
 ## Enabler: 
 Top right you can see the Enabler address 
 
-Compensation has 2 tabs – Member & Watcher
+Compensation DApp has 2 tabs – **Member & Watcher**
 Enabler can click on either of this 2 tabs
 
 When Enabler clicks on Member tab, it will see sub-tabs - Transfer to Member & Tx Details
@@ -59,5 +58,5 @@ Watcher Address & Refund amount
 1. Frontend :  HTML + CSS, Javascript
 2. Middleware : web3.js
 3. Backend : Solidity
-4. Blockchain network– Ganache, Metamask
+4. Blockchain network– Ganache, TestNetwork (Ropsten, etc)
 5. Framework – truffle

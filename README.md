@@ -31,7 +31,7 @@ If Enabler selects Transfer to Member, then here Transfer to Member can be initi
 
 ### Tx Details explorer: 
 It will have call method to fetch all the details
-When user clicks on this tab, it will list down all the Transaction done to a member
+When user clicks on this tab, it will list down all the Transaction done to a member with below details
 1. Member Address
 2. Compensation amount
 
@@ -48,8 +48,10 @@ If Enabler selects Refund to Watcher, then here Refund to Watcher can be initiat
 
 
 ### Refund Details explorer: 
-It will have call method to fetch all the details.  When user clicks on this tab, it will list down all the Refund done to a Watcher
-Watcher Address & Refund amount
+It will have call method to fetch all the details
+When user clicks on this tab, it will list down all the Refund done to a Watcher with below details
+1. Watcher Address
+2. Reputation amount
 
 ### Tech Stack
 

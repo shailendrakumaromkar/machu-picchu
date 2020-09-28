@@ -15,9 +15,8 @@ It is one of the last module in whole Machu-Picchu project.  Compensation is the
 ## Enabler: 
 Top right you can see the Enabler address 
 
-Compensation DApp has 2 tabs – **Member & Watcher**.  Enabler can click on either of this 2 tabs
+Compensation DApp has 2 tabs – **Member & Watcher**.  <br />Enabler can click on either of this 2 tabs
 
-When Enabler clicks on Member tab, it will see sub-tabs - Transfer to Member & Tx Details
 
 ## Member
 

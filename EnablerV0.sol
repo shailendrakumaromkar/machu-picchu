@@ -24,12 +24,13 @@ contract EnablerV0 {
         owner = msg.sender;
     }
     
-    // Only Enabler 
+    // Defining modifier for Only Enabler 
      modifier onlyEnabler {
         require (msg.sender == owner);
         _;
     }
     
+    //Defining event post Compensation amount Transfer
     event CompensationTransfer (address member, uint amount);
     
     
@@ -71,7 +72,7 @@ contract EnablerV0 {
         compAmount = lossPercent * merit * MTBF/100 ; 
         balances[_reciever] += compAmount;
         
-        //require (potAmount >= compAmount);
+        require (potAmount >= compAmount);
         
         potAmount -= compAmount;
         

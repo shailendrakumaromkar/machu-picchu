@@ -28,12 +28,15 @@ contract EnablerV0 {
         potAmount+=msg.value;
     }
     
+     //Need to define Event for Compensation Amount Transfer
+     
     //Get member details
     function getMemberDetails() public view returns (Member memory) {
      return _member;
     }
     
     //Calculate merit of member based on Avg monthly contribution
+    //Need to add modifier, onlyEnabler can call this Function
     function calcMerit() public view returns (uint) {
         
         uint merit = _member.memberContribution/_member.countMemberContribution;
@@ -47,6 +50,8 @@ contract EnablerV0 {
     }
     
     //Calculate Compensation of partiucualr member & transfer to member account
+    //Need to add modifier, onlyEnabler can call this Function
+    //Need to emit Event for Compensation Amount Transfer
     function calcCompensation(address _reciever) public {
         
         //Below value will come from Watcher smart contract
@@ -55,6 +60,8 @@ contract EnablerV0 {
         uint compAmount;
         
         compAmount = lossPercent * merit * MTBF/100 ; 
+        
+        //need to add require condition to check potAmount> compAmount
         balances[_reciever] += compAmount;
         potAmount -= compAmount;
    }

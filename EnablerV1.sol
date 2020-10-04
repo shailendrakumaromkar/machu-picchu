@@ -37,7 +37,6 @@ contract EnablerV1 {
     //Defining an event post Compensation amount Transfer
     event CompensationTransfer (address member, uint amount);
     
-    
     //Register a member
     function registerMember(string memory _name) public payable {
         _member.memberAddr = msg.sender;
@@ -57,7 +56,6 @@ contract EnablerV1 {
     
     //Calculate merit of member based on Avg monthly contribution
     function calcMerit() public onlyEnabler view  returns (uint) {
-     
         uint totalMonth = (block.timestamp - _member.onboardingDate)/60/60/24/30;
         uint merit = _member.memberContribution/totalMonth;
         
@@ -82,7 +80,6 @@ contract EnablerV1 {
         balances[_receiver] += compAmount;
         
         require (potAmount >= compAmount);
-        
         potAmount -= compAmount;
         
         emit CompensationTransfer(_receiver,compAmount);

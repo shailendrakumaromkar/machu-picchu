@@ -40,7 +40,7 @@ contract EnablerV0 {
         return merit;
     }
     
-    //Value of % loss will come from Watcher function
+    //Value of % loss will come from Watcher smart contract
     function getGroupLossPercent() public pure returns (uint) {
         //sample lo25Percent value as 25
         return 25;

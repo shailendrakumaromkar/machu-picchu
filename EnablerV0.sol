@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 contract EnablerV0 {
     
     uint public potAmount;
-    
+    address owner;
     struct  Member  {
         address memberAddr;
         string name;
@@ -17,7 +17,21 @@ contract EnablerV0 {
     //Get member balance
     mapping (address => uint) public balances;
     
-    uint MTBF =48;
+    //Considering MTBF of the community as 48 = 4 years
+    uint MTBF = 48;
+    
+    constructor () {
+        owner = msg.sender;
+    }
+    
+    // Only Enabler 
+     modifier onlyEnabler {
+        require (msg.sender == owner);
+        _;
+    }
+    
+    event CompensationTransfer (address member, uint amount);
+    
     
     //Register a member
     function registerMember(string memory _name) public payable {
@@ -28,16 +42,13 @@ contract EnablerV0 {
         potAmount+=msg.value;
     }
     
-     //Need to define Event for Compensation Amount Transfer
-     
     //Get member details
     function getMemberDetails() public view returns (Member memory) {
      return _member;
     }
     
     //Calculate merit of member based on Avg monthly contribution
-    //Need to add modifier, onlyEnabler can call this Function
-    function calcMerit() public view returns (uint) {
+    function calcMerit() public onlyEnabler view  returns (uint) {
         
         uint merit = _member.memberContribution/_member.countMemberContribution;
         return merit;
@@ -50,9 +61,7 @@ contract EnablerV0 {
     }
     
     //Calculate Compensation of partiucualr member & transfer to member account
-    //Need to add modifier, onlyEnabler can call this Function
-    //Need to emit Event for Compensation Amount Transfer
-    function calcCompensation(address _reciever) public {
+    function calcCompensation(address _reciever) public onlyEnabler {
         
         //Below value will come from Watcher smart contract
         uint lossPercent = getGroupLossPercent();
@@ -60,9 +69,12 @@ contract EnablerV0 {
         uint compAmount;
         
         compAmount = lossPercent * merit * MTBF/100 ; 
-        
-        //need to add require condition to check potAmount> compAmount
         balances[_reciever] += compAmount;
+        
+        //require (potAmount >= compAmount);
+        
         potAmount -= compAmount;
+        
+        emit CompensationTransfer(_reciever,compAmount);
    }
 }

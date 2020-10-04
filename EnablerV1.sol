@@ -44,6 +44,7 @@ contract EnablerV1 {
         _member.name = _name;
         _member.memberContribution +=msg.value;
         /*this is hardcoded value only to test Merit in Enabler smart contract
+        below line will be uncommented in Final
         _member.onboardingDate = block.timestamp; */
         _member.onboardingDate = 1498867200;
         potAmount+=msg.value;

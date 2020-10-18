@@ -407,16 +407,6 @@ contract MachuPicchu {
         
  }
  
-    //Verify Watcher1 Balance
-    function getWatcher1Balance() public returns (uint) {
-            return balances[watcherAddress[0]];
-        }
-       
-    //Verify Watcher2 Balance
-    function getWatcher2Balance() public returns (uint) {
-            return balances[watcherAddress[1]];
-        }
-
     //Calculate merit of member based on Avg monthly contribution
     function calcMerit(address _member) private returns (uint256) {
         uint256 totalMonth = (block.timestamp -
